@@ -6,7 +6,7 @@ topics: ["Go","Docker","VSCode","DevContainer"]
 published: true
 ---
 # 概要
-[前回の記事](https://qiita.com/ka-zuu/items/3144780ee528815e7557)でVSCodeでDockerのDevContainerをサクッと起動して、OS環境を汚さない快適開発環境を作れるようになったけど、Goでサンプル実装しようとすると、どうにもうまく行かない。
+[前回の記事](https://zenn.dev/kazuu/articles/fa84bec08f855b)でVSCodeでDockerのDevContainerをサクッと起動して、OS環境を汚さない快適開発環境を作れるようになったけど、Goでサンプル実装しようとすると、どうにもうまく行かない。
 具体的には、自分の作ったpackageをimportできない。
 情報を色々検索したところ、Goの推奨する標準構成が色々変わったことに、インターネッツの記事が追いついていなく、新旧の情報が錯綜しているためだった。
 結果的に解決できたので、その備忘録を書いておく。
