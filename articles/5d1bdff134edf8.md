@@ -3,7 +3,7 @@ title: "VSCode + Remote ContainerでGoの開発環境を作ったけどimportで
 emoji: "🐷"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Go","Docker","VSCode","DevContainer"]
-published: false
+published: true
 ---
 # 概要
 [前回の記事](https://qiita.com/ka-zuu/items/3144780ee528815e7557)でVSCodeでDockerのDevContainerをサクッと起動して、OS環境を汚さない快適開発環境を作れるようになったけど、Goでサンプル実装しようとすると、どうにもうまく行かない。
