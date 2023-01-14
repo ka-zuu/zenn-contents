@@ -34,7 +34,7 @@ VSCodeをインストールして、拡張機能でRemote-SSHをインストー�
 [VSCodeを使ってサーバー環境にSSHリモート接続手順](https://blog.masuyoshi.com/vscode%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E7%92%B0%E5%A2%83%E3%81%ABssh%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E6%8E%A5%E7%B6%9A%E6%89%8B%E9%A0%86/)
 
 ### DevContainer起動
-さて、Docker Engineが入ったサーバへssh接続できれば、あとはローカルのDocker DesktopでDevContainer作成する場合とほぼ同じです。[^拙記事もぜひhttps://zenn.dev/kazuu/articles/fa84bec08f855b]
+さて、Docker Engineが入ったサーバへssh接続できれば、あとはローカルのDocker DesktopでDevContainer作成する場合とほぼ同じです。^[拙記事もぜひhttps://zenn.dev/kazuu/articles/fa84bec08f855b]
 VSCodeで「フォルダを開く」→作業ディレクトリを選択。
 作業ディレクトリがなければ、VSCodeでターミナルを開いて、 `mkdir` しましょう。
 その状態でコマンドパレットを開いて「Dev Conteiners: Open Folder in Container...」、もしくは左下の「SSH:サーバ名」をクリックして「Reopen in Container」
