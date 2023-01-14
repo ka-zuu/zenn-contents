@@ -56,3 +56,5 @@ VSCodeで「フォルダを開く」→作業ディレクトリを選択。
 [VSCode の Remote Tunnels で「いつもの開発環境へ」お手軽リモート接続](https://zenn.dev/hankei6km/articles/connect-my-machine-via-vscode-remote-tunne)
 これでAndroidタブレットやiPadでリモート開発だ！なんて思ったけど、やっぱりDevContainerは扱えないらしく、だとするとホットリロードや自動テストは、CI環境用意しないといけない・・・？
 まだちょっと難しそうですね。
+
+結局サーバ側でVim動かすほうがいいのではとちょっと思っている・・・
