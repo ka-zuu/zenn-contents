@@ -3,7 +3,7 @@ title: "SlackからDiscordに移行するので、Googleカレンダーの予定
 emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Googleカレンダー, Python, bash, Discord, ChatGPT]
-published: false
+published: true
 ---
 
 ## 概要
