@@ -238,6 +238,8 @@ Copilotを絡めて書いてみたい。
 
 ## 2023/1/26追記
 トークンが失効した・・・。Refresh Tokenがあるから再度アクセスできるはずが・・・？
+`google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})`
+
 と思ったら、以下の場合には7日間で失効するらしい。
 * OAuth 2.0 クライアント ID を利用していて、
 * OAuth 同意画面の公開ステータスが「テスト」のままで（未公開で）、
