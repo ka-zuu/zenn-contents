@@ -245,7 +245,9 @@ Copilotを絡めて書いてみたい。
 
 ## 2023/1/26追記
 トークンが失効した・・・。Refresh Tokenがあるから再度アクセスできるはずが・・・？
-`google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})`
+```python
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+```
 
 と思ったら、以下の場合には7日間で失効するらしい。
 * OAuth 2.0 クライアント ID を利用していて、
@@ -264,7 +266,7 @@ Copilotを絡めて書いてみたい。
 
 ### ChatGPTに聞いてみる
 ![](/images/4efb2aac76fd7a/4efb2aac76fd7a_chatgpt_service_account.png)
-Googleさんもtokenはいらないって言っている。
+ChatGPTさんもtokenはいらないって言っている。
 
 ただ、Credentialsメソッドはサービスアカウント用のオブジェクトのものを使うので、`from google.oauth2.service_account import Credentials`に修正。
 
