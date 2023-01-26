@@ -34,8 +34,15 @@ Googleカレンダーからの情報取得の方法をググると、いくつ�
 こちらのサイトがわかりやすかったです。
 [APIキー、OAuthクライアントID、サービスアカウントキーの違い:Google APIs - 無粋な日々に](https://messefor.hatenablog.com/entry/2020/10/08/080414)
 
+### 2023/1/26追記
+個人アカウントだと7日でトークンが失効します。サービスアカウントで実装するほうが良いです。
+コードも結果的に短くてすみます。
+最後に補足しています。
 
-## Discordの対応方法
+
+## 実装
+
+### Discordの対応方法
 
 Webhookの作り方は公式のここに書いてあります。
 [Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
@@ -53,7 +60,7 @@ Webhookに投げる方法は、こちらにすべてがあり、とても参考�
 [Discord Webhooks Guide](https://birdie0.github.io/discord-webhooks-guide/tools/curl.html)
 
 
-## Googleの対応方法
+### Googleの対応方法
 
 Googleカレンダーへのアクセスについては、基本的にはクイックスタートガイドどおりにやればいい説
 [Python quickstart | Google Calendar | Google Developers](https://developers.google.com/calendar/api/quickstart/python)
@@ -71,7 +78,7 @@ Googleへアクセスするためのライブラリをインストールすれ�
 
 
 
-## Pythonの実装
+### Pythonの実装
 設計としては、今以降の予定をすべて取得する→前回の取得結果とdiff→差分を通知。
 予定の取得はPythonのサンプルコードをベースに修正する。
 
@@ -158,7 +165,7 @@ if __name__ == '__main__':
 Python詳しくなくてもできちゃうじゃん。
 
 
-## シェルスクリプトの実装
+### シェルスクリプトの実装
 スクリプトはこちら。
 ```bash
 #!/bin/bash -xvu
@@ -247,3 +254,20 @@ Copilotを絡めて書いてみたい。
 [Google API で Token has been expired or revoked. のエラー](https://isgs-lab.com/727/)
 
 サービスアカウントを作って対応することにする・・・
+
+### サービスアカウントでアクセスするための修正
+サービスアカウントで接続する場合、Credentialsメソッドを呼び出すためのオブジェクト指定が変わるらしい。
+[Google APIの利用で Client secrets must be for a web or installed app. と怒られる](https://isgs-lab.com/729/)
+
+上記では、Googleのサンプルコードを修正しているが、以下のサイトを見ると、tokenの取得フローって不要になるっぽい？
+[【Python】GoogleカレンダーAPIを操作して予定の取得・追加をする方法](https://kosuke-space.com/google-calendar-api-python)
+
+### ChatGPTに聞いてみる
+![](/images/4efb2aac76fd7a/4efb2aac76fd7a_chatgpt_service_account.png)
+Googleさんもtokenはいらないって言っている。
+
+ただ、Credentialsメソッドはサービスアカウント用のオブジェクトのものを使うので、`from google.oauth2.service_account import Credentials`に修正。
+
+### Pythonを修正
+あとは、前に作成したコードと同様に、引数からカレンダーIDを受け取るようにすることと、今以降のすべての予定を取得するように修正する。
+修正したコードは[Github](https://github.com/ka-zuu/GoogleCalendar_to_Discord/blob/main/get_event_gcal_sarvice_account.py)で。
