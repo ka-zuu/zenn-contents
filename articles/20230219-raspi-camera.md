@@ -16,7 +16,7 @@ published: true
 カメラモジュールはAliExpressで適当に買ったV2 camera (IMX219)。
 
 ## 結論
-ラズパイ4を使うことと、`libcamera-apps`を使うこと、ffmpegはaptでインストールできるものでOK。
+ラズパイ4を使うことと、`raspivid`ではなく`libcamera-apps`を使うこと、ffmpegはaptでインストールできるものでOK。
 シンプルに上記でやれば、配信自体は可能でした。
 こちらのサイトが参考になります。
 [ラズパイ新OS「Bullseye」でのカメラモジュールの使い方｜libcameraの使い方も詳しく解説](https://hellobreak.net/raspberry-pi-bullseye-libcamera/)
@@ -44,6 +44,7 @@ libOmxCore.so not found
 
 ここから、色々調べながらOMX＝ラズパイのハードウェアエンコーダをどうにかできないかを1日かけてやったけど、無理でした。
 で、結果諦めてラズパイ4で最初からやってみたら、結論のとおりにうまくいきました、というお話でした。
+ただし、ラズパイ3で動いた`raspivid`は動かないので、`libcamera-vid`を使うことと、エンコーダーのオプション指定は`h264_omx`ではなく`libcamera-vid`にすること。
 
 OMXのインストールや、ffmpegのソースからのビルド（ライブラリの取捨選択が多すぎてわけわからん・・・）を経て、
 何もしなくて良いということに落ち着いて、力が抜けた・・・というお話でした。
