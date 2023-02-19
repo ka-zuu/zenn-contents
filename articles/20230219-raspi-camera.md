@@ -3,7 +3,7 @@ title: "RaspiでカメラモジュールからYoutube配信するときの決定
 emoji: "🍣"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Raspberrypi", "カメラモジュール", "Youtube配信"]
-published: false
+published: true
 ---
 
 ## 概要
