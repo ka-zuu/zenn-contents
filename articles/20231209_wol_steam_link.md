@@ -24,16 +24,25 @@ Todo：ここにネットワーク図を入れる
 ## やること
 
 ### Wake on Lanを有効にする
-1. Windows11の設定
-2. BIOS(EFI)の設定
+#### Windows11の設定
+こちらのページに詳しいです。
+@[card](https://internet.watch.impress.co.jp/docs/column/teleworkstory/1428786.html)
+やることは2つ
+* LANから起動できるようにデバイスの設定
+* 高速起動のオフ
+
+
+#### BIOS(EFI)の設定
+マザーボードのBIOS（最近はEFI）でも、WoLを有効にする必要がある
+
 
 ### 自動ログインの設定
-1. 認証なしログインの設定
-2. Windows Helloの無効化
+#### 認証なしログインの設定
+#### Windows Helloの無効化
 
 ### Steamの設定
-1. 自動起動設定
-2. 音の出力
+#### 自動起動設定
+#### 音の出力
 
 ## まとめ
 
