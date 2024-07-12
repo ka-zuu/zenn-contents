@@ -40,6 +40,9 @@ Todo：ここにネットワーク図を入れる
 #### 認証なしログインの設定
 #### Windows Helloの無効化
 
+### Windows11 矯正再起動後のウェルカムページを回避
+[](https://atmarkit.itmedia.co.jp/ait/articles/2403/18/news021.html)
+
 ### Steamの設定
 #### 自動起動設定
 #### 音の出力
